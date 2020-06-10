@@ -2,7 +2,7 @@ import React from 'react';
 import Titles from './components/TitleComponent/TitleComponent';
 import Form from './components/FormComponent/FormComponent';
 import Weather from './components/WeatherComponent/WeatherComponent';
-import axios from './axios-weather';
+import axios from 'axios';
 import * as apiConfig from './apiKeys';
 
 class App extends React.Component {
@@ -69,4 +69,3 @@ class App extends React.Component {
 }
 
 export default App;
-        
