@@ -1,0 +1,32 @@
+.AutoComplete ul{
+    border: 1px solid #f16051;
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-family: 'Roboto Slab', serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+.AutoComplete ul li{
+    width: 100%;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 100;
+    padding: 10px;
+    text-align: left;
+}
+.AutoComplete ul li:hover{
+    background-color: #f16051;
+}
+.AutoComplete ul::before {
+    content: ''
+}
+.AutoComplete{
+    display: inline-block;
+    margin: 10px;
+}
