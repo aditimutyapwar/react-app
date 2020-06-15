@@ -1,5 +1,6 @@
 
 import React from 'react';
+import classes from './form.module.css';
 
 const form = props => (
     <form onSubmit={props.getWeather}>

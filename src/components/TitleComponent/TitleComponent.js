@@ -1,9 +1,9 @@
 import React from 'react';
-
+import classes from './title.module.css';
 const titles = () => (
     <div>
-        <h1 className="title-container-title">Daily Weather App</h1>
-        <p className="title-container-subtitle">Find out temparature conditions and more...</p>
+        <h1 className={classes.titleContainerTitle}>Daily Weather App</h1>
+        <p className={classes.titleContainerSubtitle}>Find out temparature conditions and more...</p>
     </div>
 );
 

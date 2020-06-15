@@ -1,12 +1,13 @@
 import React from 'react';
+import classes from './weather.module.css';
 
 const weather = props => (
-    <div className="weather-info">
-        {props.city && props.country && <p className="weather-key">Location:<span className="weather-value"> {props.city }, {props.country }</span></p>}
-        {props.temperature && <p className="weather-key">Temperature:<span className="weather-value"> {props.temperature }</span></p>}
-        {props.humidity && <p className="weather-key">Humidity:<span className="weather-value"> {props.humidity }</span></p>}
-        {props.description && <p className="weather-key">Conditions:<span className="weather-value"> {props.description }</span></p>}
-        {props.error && <p className="weather-error">{ props.error }</p>}
+    <div className={classes.weatherInfo}>
+        {props.city && props.country && <p className={classes.weatherKey}>Location:<span className={classes.weatherValue}> {props.city }, {props.country }</span></p>}
+        {props.temperature && <p className={classes.weatherKey}>Temperature:<span className={classes.weatherValue}> {props.temperature }</span></p>}
+        {props.humidity && <p className={classes.weatherKey}>Humidity:<span className={classes.weatherValue}> {props.humidity }</span></p>}
+        {props.description && <p className={classes.weatherKey}>Conditions:<span className={classes.weatherValue}> {props.description }</span></p>}
+        {props.error && <p className={classes.weatherError}>{ props.error }</p>}
     </div>
 );
 
