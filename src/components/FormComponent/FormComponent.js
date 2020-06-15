@@ -1,13 +1,28 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './form.module.css';
 
-const form = props => (
-    <form onSubmit={props.getWeather}>
-        <input type="text" name="city" placeholder="city" />
-        <input type="text" name="country" placeholder="country" />
+const Form = props => {
+    const [city, setCity] = useState('');
+    const [country, setCountry] = useState('');
+
+    return (
+    <form onSubmit={(e) => props.getWeather(e, city, country)}>
+        <input 
+            type="text" 
+            name="city" 
+            value={city}
+            onChange={e => setCity(e.target.value)}
+            placeholder="city" />
+        <input 
+            type="text" 
+            name="country" 
+            value={country}
+            onChange={e => setCountry(e.target.value)}
+            placeholder="country" />
         <button>Get Weather</button>
     </form>
-);
+    );
+};
 
-export default form;
+export default Form;

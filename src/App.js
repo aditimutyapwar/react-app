@@ -15,10 +15,8 @@ class App extends React.Component {
     error: undefined
   }
 
-  getWeather = (e) => {
+  getWeather = (e, city, country) => {
     e.preventDefault();
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
     if(city && country) {
       axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiConfig.API_KEY}&units=metric`)
       .then(response => {
@@ -50,7 +48,7 @@ class App extends React.Component {
                     <Titles />
                   </div>
                   <div className="col-xs-7 form-container">
-                    <Form getWeather={this.getWeather}/>
+                    <Form getWeather={(e, city, country) => this.getWeather(e, city, country)}/>
                     <Weather 
                       temperature={this.state.temperature}
                       city={this.state.city}
